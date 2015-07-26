@@ -1,0 +1,25 @@
+Flask y
+Flask-Bcrypt y
+Flask-HTTPAuth y
+Flask-RESTful y
+Flask-SQLAlchemy y
+Flask-WTF y
+Jinja2 y
+MarkupSafe y
+SQLAlchemy y
+SQLAlchemy-Utils y
+WTForms y
+WTForms-Alchemy y
+WTForms-Components y
+Werkzeug y
+aniso8601 y
+decorator y
+infinity y
+intervals y
+itsdangerous y
+marshmallow y
+py-bcrypt y
+pytz y
+six y
+validators y
+wsgiref
