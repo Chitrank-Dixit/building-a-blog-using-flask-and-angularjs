@@ -1,0 +1,17 @@
+<div ng-controller="SessionCreateCtrl">
+<form name="authenticatioForm">
+	<center>
+	<div class="input-group">
+	  <span class="input-group-addon" id="sizing-addon2">@</span>
+	  <input type="email" class="form-control" ng-model="user.email" placeholder="Username" ng-form="authenticationForm" aria-describedby="sizing-addon2" required>
+	</div>
+
+	<div class="input-group">
+	  <span class="input-group-addon" id="sizing-addon2">@</span>
+	  <input type="password" class="form-control" ng-model="user.password" placeholder="Password" ng-form="authenticationForm" aria-describedby="sizing-addon2" required>
+	</div>
+
+	<button class="btn btn-primary" ng-click="submit(1,user)">Login</button>
+	</center>
+	</form>
+</div>

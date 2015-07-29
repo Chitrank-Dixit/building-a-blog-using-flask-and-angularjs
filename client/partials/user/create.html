@@ -1,0 +1,23 @@
+
+<div ng-controller="UserCreateCtrl">
+<center>
+<form name="userCreateForm">
+	<div class="input-group">
+	  <span class="input-group-addon" id="sizing-addon2">@</span>
+	  <input type="email" class="form-control" ng-model="user.email" placeholder="Username" ng-form="userCreateForm" aria-describedby="sizing-addon2">
+	</div>
+
+	<div class="input-group">
+	  <span class="input-group-addon" id="sizing-addon2">@</span>
+	  <input type="password" class="form-control" ng-model="user.password" placeholder="Password" ng-form="userCreateForm" aria-describedby="sizing-addon2">
+	</div>
+
+	<div class="input-group">
+	  <span class="input-group-addon" id="sizing-addon2">@</span>
+	  <input type="password" class="form-control" ng-model="user.passwordConfirmation" placeholder="Confirm Password" ng-form="userCreateForm" aria-describedby="sizing-addon2">
+	</div>
+
+<button class="btn btn-primary" ng-click="submit(1, user)">Register</button>
+</form>
+</center>
+</div>

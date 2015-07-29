@@ -1,9 +1,9 @@
 Blog.controller('UserCreateCtrl', function($scope, User) {
 
     var defaultForm = {
-        email: '',
-        password: '',
-        passwordConfirmation: ''
+        email: 'a@a.com',
+        password: 'abcd',
+        passwordConfirmation: 'abcd'
     };
 
     $scope.user = angular.copy(defaultForm);
@@ -17,8 +17,10 @@ Blog.controller('UserCreateCtrl', function($scope, User) {
         if (!isValid) {
             return;
         }
+        console.log("In here");
 
         User.create(user).then(function(response) {
+            console.log(response);
             $scope.accountCreated = true;
 
             // reset form
