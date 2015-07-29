@@ -1,9 +1,9 @@
-Blog.controller('UserCreateCtrl', function($scope, User) {
+Blog.controller('UserCreateCtrl', function($scope, $location ,User, Session, AuthService) {
 
     var defaultForm = {
-        email: 'a@a.com',
-        password: 'abcd',
-        passwordConfirmation: 'abcd'
+        email: '',
+        password: '',
+        passwordConfirmation: ''
     };
 
     $scope.user = angular.copy(defaultForm);
@@ -23,6 +23,12 @@ Blog.controller('UserCreateCtrl', function($scope, User) {
             console.log(response);
             $scope.accountCreated = true;
 
+            // now log in user
+            AuthService.login(user).then(function(user) {
+                $location.path('/posts/create')
+            }, function(response) {
+                $scope.failedLoginAttempt = true;
+            });
             // reset form
             $scope.submitted = false;
             $scope.user = angular.copy(defaultForm);
