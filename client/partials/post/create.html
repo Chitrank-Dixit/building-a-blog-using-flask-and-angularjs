@@ -1,0 +1,19 @@
+<div ng-controller="PostCreateCtrl">
+	<center>
+		<form name="postCreateForm">
+			<div class="input-group">
+			  
+			  <input type="text" class="form-control" ng-model="post.title" placeholder="Title" ng-form="postCreateForm" aria-describedby="sizing-addon2" required>
+			</div>
+
+			<div class="input-group">
+			  
+			  <textarea class="form-control" ng-model="post.body" placeholder="Enter the post description" aria-describedby="sizing-addon2" required> </textarea>
+			  
+			</div>
+			<button class="btn btn-primary" ng-click="submit(1, post)">Post</button>
+		</form>
+
+	</center>
+
+</div>
